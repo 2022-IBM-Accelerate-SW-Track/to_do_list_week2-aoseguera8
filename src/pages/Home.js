@@ -39,16 +39,12 @@ class Home extends Component {
 
     // const exist = this.state.todos.includes(todo.content);
 
-    if(this.state.todos.find(element => element.content === todo.content)){
-      return
-
+    if(this.state.todos.find(i => i.content === todo.content)){
+   
     } else {
-
       todo.id = Math.random();
       let new_list = [...this.state.todos, todo];
-    
-
-    this.setState({
+      this.setState({
       todos: new_list,
     });
   }
